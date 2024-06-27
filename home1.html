@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"/>
+		<title>home1</title>
+		<style type="text/css">
+			
+		body{
+				
+				width:1920px;
+				max-height:1080px;
+				margin:0 auto;
+				background-color:#ddf8f0;
+				overflow-x:hidden;
+			}
+		#mainDiv {
+			display: flex;
+			flex-direction:column;
+			justify-content: center;
+			align-items: center;
+		}
+			
+		#san{	
+			transform-origin: top left;
+			position: absolute;
+			width: 40%;
+			left: 65%;
+			top: -20%;
+		}
+			
+#san2 {    
+    transform-origin: center center; /* 旋转中心设置为图片中心 */  
+    width: 100%; /* 假设您想要图片填满其父元素 */  
+    height: auto;  
+    display: block;  
+    animation: spin2 5s linear infinite; /* 新的旋转动画 */  
+}  
+  
+@keyframes spin2 {    
+    from {    
+        transform: rotate(0deg);    
+    }    
+    to {    
+        transform: rotate(360deg);    
+    }    
+}
+			
+		#biaoti{
+
+			width:50%;
+		    position:relative;
+		    right: 15%;
+		    margin-bottom:50px;
+		    animation: mymove 3s forwards;
+		}
+		
+#rotating-wrapper {  
+        position: relative; /* 设置父容器为相对定位 */ 
+         
+        /* 可以添加其他样式，如宽度、高度等 */  
+    }  
+      
+    #san2 {  
+        position: absolute; /* 绝对定位相对于最近的已定位祖先元素（在这里是#rotating-wrapper） */  
+        left: 1100px; /* 设置距离父容器左侧的距离 */  
+        top: 300px; /* 设置距离父容器顶部的距离 */  
+        width: 400px;  
+        height: 400px;  
+        animation: spin 5s linear infinite; /* 旋转动画 */  
+    }  
+  
+    @keyframes spin {  
+        from { transform: rotate(0deg); }  
+        to { transform: rotate(360deg); }  
+    }  
+  
+    #san2:hover {  
+        animation-play-state: paused;  
+    }  
+		
+		@keyframes mymove {
+		  from {top: -800px;}
+		  to {top:250px;}
+		}
+			
+		</style>	
+		
+		
+		
+	<body>
+		<div id="mainDiv">
+			<img src="img/hometu/san.png" id="san" />	
+			<img src="img/homezi/biaoti1.png" id="biaoti"/>
+		</div>
+		<div id="rotating-wrapper"> <!-- 创建一个可悬停的 div 包裹 img -->  
+        <img src="img/hometu/san.png" id="san2" /> 
+        
+    </div>
+	</body>
+</html>
