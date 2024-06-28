@@ -6,15 +6,15 @@
 		<title>home1</title>
 		<style type="text/css">
 			
-		body{
-				
-				width:1920px;
-				max-height:1080px;
-				margin:0 auto;
-				background-color:#ddf8f0;
-				overflow-x:hidden;
-				overflow-y: hidden;
+		body{	
+			width:1920px;
+			max-height:1080px;
+			margin:0 auto;
+			background-color:#ddf8f0;
+			overflow-x:hidden;
+			overflow-y: hidden;
 			}
+			
 		#mainDiv {
 			display: flex;
 			flex-direction:column;
@@ -26,55 +26,44 @@
 			transform-origin: top left;
 			position: absolute;
 			width: 40%;
-			left: 65%;
-			top: -20%;
+			right: -5%;
+			bottom: 40%;
 		}
 		
-		#san2 {
-		transform-origin: center center; /* 旋转中心设置为图片中心 */
-		width: 100%; /* 假设您想要图片填满其父元素 */
-		height: auto;
-		display: block;
-		animation: spin2 5s linear infinite; /* 新的旋转动画 */
-		}
-		
-		@keyframes spin2 {
-			from {transform: rotate(0deg);}
-			to {transform: rotate(360deg);}
-		}
-			
 		#biaoti{
+			position: absolute;
 			width:50%;
-		    position:relative;
-		    right: 15%;
+		    right: 40%;
 		    margin-bottom:50px;
 		    animation: mymove 3s forwards;
 		}
 		
 		#rotating-wrapper {
-        position: absolute; /* 设置父容器为相对定位 */
-        /* 可以添加其他样式，如宽度、高度等 */
-        width: 400px;
-        height: 400px;
-        right: 300px;
-        bottom: -200px;
+			position: absolute; /* 设置父容器为相对定位 */
+			/* 可以添加其他样式，如宽度、高度等 */
+			width: 400px;
+			height: 400px;
+			right: 300px;
+			bottom: -200px;
         }
         
-        #san2 {
-        width: 400px;
-        height: 400px;
-        animation: spin 5s linear infinite; /* 旋转动画 */
+		#san2 {
+			transform-origin: center center; /* 旋转中心设置为图片中心 */
+			width: 100%; /* 假设您想要图片填满其父元素 */
+			height: auto;
+			display: block;
+			animation: spin 5s linear infinite; /* 旋转动画 */
+		}
+
+		#san2:hover {
+			animation-play-state: paused;
         }
-        
+	
         @keyframes spin {
         	from { transform: rotate(0deg); }
         	to { transform: rotate(360deg); }
         }
         
-        #san2:hover {
-        animation-play-state: paused;
-        }  
-		
 		@keyframes mymove {
 			from {top: -420px;}
 			to {top:250px;}
