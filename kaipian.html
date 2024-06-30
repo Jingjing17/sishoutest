@@ -30,30 +30,27 @@
 			bottom: 30%;
 		}
 		
-		.button-container {  
+		.button-container {
 			position: absolute;
-			right: 20%;
+			right: 300px;
+			bottom: 200px;
+			width: 950px; /* 容器宽度 */
+			height: auto; /* 容器高度自动，或者设置为具体值 */
+			display: flex;
+			justify-content: space-between; /* 图片之间等间距 */
+		}
+		
+		.image-button {
+			text-decoration: none; /* 去除链接的下划线 */
 			bottom: 20%;
-  width: 950px; /* 容器宽度 */  
-  height: auto; /* 容器高度自动，或者设置为具体值 */  
-  display: flex;  
-  justify-content: space-between; /* 图片之间等间距 */  
-  /* 可以添加其他样式，如padding、border等 */  
-}  
-  
-.image-button {
-  text-decoration: none; /* 去除链接的下划线 */  
-  bottom: 20%;
-}  
-  
-.image-button img {  
-  width: 120px; /* 图片宽度 */  
-  height: auto; /* 图片高度自动 */  
-  /* 如果需要，可以添加margin-right来设置图片之间的间距，但justify-content已经做了这个工作 */  
-}  
-
-
+		}
+		
+		.image-button img {
+			width: 120px; /* 图片宽度 */
+			height: auto; /* 图片高度自动 */
+		}  
 		</style>  
+		
 		<script type="text/javascript">
 		$(document).ready(function() {
             $('.image-button img').on('mouseenter', function() {
@@ -62,26 +59,27 @@
             $(this).css('transform', 'scale(1)');
             });
         });
-	</script>
-	</head>  
+		</script>
+	</head>
+	
 	<body>  
 		<div id="mainDiv">
 			<img src="img/daohang/kaipian.png" id="kaipian" />
 		</div>
-		<div class="button-container">  
-  <a href="zuozhejieshao.html" class="image-button">  
-    <img src="img/daohang/zuozhejieshao.png" alt="Button 1">  
-  </a>  
-  <a href="gushishiyi.html" class="image-button">  
-    <img src="img/daohang/gushishiyi.png" alt="Button 2">  
-  </a>  
-  <a href="chuangzuobeijing.html" class="image-button">  
-    <img src="img/daohang/chuangzuobeijing.png" alt="Button 3">  
-  </a>  
-  <a href="zhishiceyan.html" class="image-button">  
-    <img src="img/daohang/zhishiceyan.png" alt="Button 4">  
-  </a>  
-</div>
+		<div class="button-container">
+			<a href="zuozhejieshao.html" class="image-button">
+				<img src="img/daohang/zuozhejieshao.png" alt="Button 1">
+			</a>
+			<a href="gushishiyi.html" class="image-button">
+				<img src="img/daohang/gushishiyi.png" alt="Button 2">
+			</a>
+			<a href="chuangzuobeijing.html" class="image-button">
+				<img src="img/daohang/chuangzuobeijing.png" alt="Button 3">
+			</a>
+			<a href="zhishiceyan.html" class="image-button">
+				<img src="img/daohang/zhishiceyan.png" alt="Button 4">
+			</a>
+		</div>
 	</body>  
 </html>
 
