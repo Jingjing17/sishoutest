@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"/>
+		<title>唐代诗歌的时空感和人生哲理</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<style type="text/css">
+			
+		body, html {
+			height: 100%;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #ddf8f0;
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
+		
+		#mainDiv {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center; /* 水平居中 */
+		align-items: center; /* 垂直居中（如果只有一行元素）*/
+		max-width: 100%; /* 根据容器宽度调整 */
+		}
+		
+		#kaipian, .image-button {
+			/* 假设图片是响应式的，即设置了 max-width: 100% */
+			margin: 50px; /* 根据需要调整间距 */
+			text-align: center; /* 如果需要文本居中 */
+			flex: 0 0 auto; /* 不增长，不缩小，保持原始大小或内容大小 */
+		}
+		
+		#kaipian img, .image-button img {
+			max-width: 100%; /* 图片宽度最大为容器宽度 */
+			height: auto; /* 图片高度自动 */transition: transform 0.3s ease; /* 添加过渡效果 */
+		}
+			
+		.image-button {
+			text-decoration: none; /* 去除链接的下划线 */
+			display: flex; /* 如果需要在链接中垂直居中图片和文本 */
+			align-items: center; /* 垂直居中 */
+			justify-content: center; /* 水平居中 */
+		}
+		
+		.image-button img {
+			width: 120px; /* 图片宽度 */
+			height: auto; /* 图片高度自动 */
+			transition: transform 0.3s ease; /* 添加过渡效果 */
+		}
+		
+		</style>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.image-button img').on('mouseenter', function() {
+					$(this).css('transform', 'scale(1.2)');
+				}).on('mouseleave', function() {
+					$(this).css('transform', 'scale(1)');
+				});
+			});
+		</script>  
+</head>  
+<body>  
+    <div id="mainDiv">  
+        <div id="kaipian">  
+            <!-- 这里是 #kaipian 的内容，比如文本或图片 -->  
+            <img src="img/daohang/kaipian.png" alt="Kaipian Image">  
+        </div>  
+        <a href="zuozhejieshao.html" class="image-button">  
+            <img src="img/daohang/zuozhejieshao.png" alt="Button 1">  
+        </a>  
+        <a href="s1.html" class="image-button">  
+            <img src="img/daohang/gushishiyi.png" alt="Button 2">  
+        </a>  
+        <a href="chuangzuobeijing.html" class="image-button">  
+            <img src="img/daohang/chuangzuobeijing.png" alt="Button 3">  
+        </a>  
+        <a href="zhishiceyan.html" class="image-button">  
+            <img src="img/daohang/zhishiceyan.png" alt="Button 4">  
+        </a>  
+    </div>  
+</body>  
+</html>
