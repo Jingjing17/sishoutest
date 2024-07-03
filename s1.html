@@ -9,10 +9,10 @@
 				/* 页面初始化 清除页面元素原有的内外边距 */
 				padding: 0;
 				margin: 0;
-			}
+			}  
 		body {  
 			font-family: 幼圆;
-			width: 100%;
+			width:1920px;
 			max-height:1080px;
 			margin:0 auto;
 			background: url(img/hometu/beijing2.jpg) no-repeat;
@@ -21,7 +21,8 @@
 			justify-content: center;  
 			align-items: flex-start;  
 			box-sizing: border-box;  
-		}
+
+		}  
 		
 		body,
 			.navbar,
@@ -100,45 +101,49 @@
 				transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 			}
 			
-		.image-button {
-			position: fixed; /* 或者使用 position: absolute; 如果你不想它随着页面滚动 */
-			right: 5%; /* 控制图片距离页面右边的距离 */
-			bottom: 5%; /* 控制图片距离页面底部的距离 */
-			z-index: 2; /* 确保图片按钮在其他元素之上 */
-		}
-		
-		.image-button img {
-			width: 80px; /* 设置图片的宽度，你可以根据需要调整 */
-			height: auto; /* 保持图片的原始纵横比 */
-		}  
+		.image-buttons-container {  
+    position: fixed; /* 固定在右下角 */  
+    right: 5%; /* 控制图片距离页面右边的距离 */  
+    bottom: 5%; /* 控制图片距离页面底部的距离 */   
+    display: flex; /* 使用Flexbox布局 */  
+    justify-content: flex-end; /* 水平方向上靠右对齐 */  
+    align-items: center; /* 垂直方向上居中对齐（如果图片高度不同则无效） */  
+    z-index: 2; /* 确保按钮在其他元素之上 */  
+}  
+  
+.image-button {  
+    margin-left: 50px; /* 图片之间的间距 */  
+    text-decoration: none; /* 去除链接的下划线 */  
+}  
+  
+.image-button img {  
+    width: 80px; /* 设置图片的宽度，根据需要调整 */  
+    height: auto; /* 保持图片的原始纵横比 */  
+}  
 
-		.container {
-			max-width: 1800px;
-			display: flex;
-			flex-wrap: nowrap;
-			margin:0 auto;
-			justify-content: center;
-			align-items: center; 
+		.container {  
+			width: 100%;  
+			display: flex;  
 		}  
 		  
-		.container .poem-section {
-			width: 600px;
+		.poem-section {  
+			width: 50%;  
+			max-width: 800px;
 			left: 0;
 			padding-top:150px;
-			padding-left: 100px;
+			padding-left: 150px;
 			box-sizing: border-box;  
 		}  
 		  
-		.container .translation-section {
-			width: 900px;
-			max-width: 900px;
+		.translation-section {  
+			width: 50%;  
+			max-width: 850px;
 			left: 0;
 			flex-direction: column;  
 			padding-top:150px;
-			padding-left: 200px;
-			padding-right: 100px;
-			box-sizing: border-box;
-		}
+			padding-left: 80px;
+			box-sizing: border-box;  
+		}  
 		  
 		.word-translation {
 			flex: 1;
@@ -151,25 +156,26 @@
 			
 		}
 		  
-		h1, h2 {
-			text-align: center;
-		}
+		h1, h2 {  
+			text-align: center;  
+		}  
 		  
-		p {
-			margin: 0;
-		}
+		p {  
+			margin: 0;  
+		}  
 		  
 		/* 古诗样式 */  
-		.poem {
-			line-height: 1.5;
-			text-align: justify;
-		}
+		.poem {  
+			
+			line-height: 1.5;  
+			text-align: justify;  
+		}  
 		  
-		/* 翻译样式 */
-		.translation {
-			font-size: 20pt;
-			line-height: 1.5;
-		}
+		/* 翻译样式 */  
+		.translation {  
+			font-size: 20pt;  
+			line-height: 1.5;  
+		}  
 	</style>
 </head>  
 <body>  
